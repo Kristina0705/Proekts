@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPF.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="572.122" Width="629.458">
+    <Grid Background="#FFFACD" Margin="0,0,-6.4,-9.6" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Border MinWidth="400" Margin="15,69,1.6,89" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="450" CornerRadius="30" Height="394">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="60" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBox x:Name="Text_name" materialDesign:HintAssist.Hint="Введите имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,10,0"/>
+                <TextBox x:Name="Text_familia" materialDesign:HintAssist.Hint="Введите фамилию" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,10,0"/>
+                <TextBox x:Name="Text_login" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,10,0"/>
+                <PasswordBox x:Name="Text_password" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,0,10,0"/>
+                <TextBox x:Name="Text_email" materialDesign:HintAssist.Hint="Введите email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,10,0"/>
+                <DatePicker x:Name="datePicker1" IsDropDownOpen="False" SelectedDateFormat="Short" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" materialDesign:HintAssist.Hint="Укажите дату рождения" Margin="0,0,10,0"/>
+                <Grid>
+                    <Button Content="Зарегистрироваться" HorizontalAlignment="Center" VerticalAlignment="Top" Width="181" Margin="199,14,9.6,0" Click="Button_Click_Reg" Height="50" />
+                    <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="181" RenderTransformOrigin="0.549,1.697" Margin="0,16,0,0" Height="48" Click="Exit" />
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
